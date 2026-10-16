@@ -40,12 +40,6 @@ public class BinarySearchTree<T extends Comparable<T>> implements Iterable<T> {
     throw new UnsupportedOperationException("TODO: Implement me");
   }
 
-  // The same search as contains, written as a loop.
-  public boolean containsIterative(T value) {
-    // TODO: Implement me
-    throw new UnsupportedOperationException("TODO: Implement me");
-  }
-
   // Does nothing if value is already in the tree.
   public void add(T value) {
     // TODO: Implement me
@@ -71,15 +65,15 @@ public class BinarySearchTree<T extends Comparable<T>> implements Iterable<T> {
     throw new UnsupportedOperationException("TODO: Implement me");
   }
 
-  // Returns the node with the smallest value in the subtree rooted at node.
-  // Throws IllegalArgumentException if node is null.
+  // Assumes node is not null. Returns the node with the smallest value in
+  // the subtree rooted at node.
   private Node<T> minNode(Node<T> node) {
     // TODO: Implement me
     throw new UnsupportedOperationException("TODO: Implement me");
   }
 
-  // Returns the node with the largest value in the subtree rooted at node.
-  // Throws IllegalArgumentException if node is null.
+  // Assumes node is not null. Returns the node with the largest value in
+  // the subtree rooted at node.
   private Node<T> maxNode(Node<T> node) {
     // TODO: Implement me
     throw new UnsupportedOperationException("TODO: Implement me");

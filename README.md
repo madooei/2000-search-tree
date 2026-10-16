@@ -39,6 +39,6 @@ code/
 
 ## What's here
 
-- `bst.BinarySearchTree<T>` — the binary search tree. It has `contains` (recursive), `containsIterative`, `add`, `remove`, and `iterator`. Each recursive operation is a public method that starts at the root and a private helper that works on a node. The private `minNode` and `maxNode` find the smallest and largest node in a subtree; `remove` uses `minNode` to find the in-order successor. The iterator is the iterative in-order traversal from the tree chapter's practice problems, with the stack kept in a field.
+- `bst.BinarySearchTree<T>` — the binary search tree. It has `contains`, `add`, `remove`, and `iterator`. Each recursive operation is a public method that starts at the root and a private helper that works on a node. The private `minNode` and `maxNode` find the smallest and largest node in a subtree; `remove` uses `minNode` to find the in-order successor. The iterator is the iterative in-order traversal from the tree chapter's practice problems, with the stack kept in a field.
 - `bst.Main` — a demo over the chapter's example tree.
 - `stack.Stack<T>` and `stack.LinkedStack<T>` — the Stack ADT and its linked implementation from the stack chapter, included so this code compiles and runs on its own.
