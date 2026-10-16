@@ -48,22 +48,6 @@ public class BinarySearchTree<T extends Comparable<T>> implements Iterable<T> {
     }
   }
 
-  // The same search as contains, written as a loop.
-  public boolean containsIterative(T value) {
-    Node<T> current = root;
-    while (current != null) {
-      int cmp = value.compareTo(current.value);
-      if (cmp == 0) {
-        return true;
-      } else if (cmp < 0) {
-        current = current.left;
-      } else {
-        current = current.right;
-      }
-    }
-    return false;
-  }
-
   // Does nothing if value is already in the tree.
   public void add(T value) {
     root = add(root, value);
@@ -117,24 +101,18 @@ public class BinarySearchTree<T extends Comparable<T>> implements Iterable<T> {
     }
   }
 
-  // Returns the node with the smallest value in the subtree rooted at node.
-  // Throws IllegalArgumentException if node is null.
+  // Assumes node is not null. Returns the node with the smallest value in
+  // the subtree rooted at node.
   private Node<T> minNode(Node<T> node) {
-    if (node == null) {
-      throw new IllegalArgumentException("empty subtree");
-    }
     while (node.left != null) {
       node = node.left;
     }
     return node;
   }
 
-  // Returns the node with the largest value in the subtree rooted at node.
-  // Throws IllegalArgumentException if node is null.
+  // Assumes node is not null. Returns the node with the largest value in
+  // the subtree rooted at node.
   private Node<T> maxNode(Node<T> node) {
-    if (node == null) {
-      throw new IllegalArgumentException("empty subtree");
-    }
     while (node.right != null) {
       node = node.right;
     }

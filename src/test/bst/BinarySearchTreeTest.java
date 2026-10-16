@@ -25,11 +25,6 @@ public class BinarySearchTreeTest {
   }
 
   @Test
-  public void newTreeContainsIterativeNothing() {
-    assertFalse(tree.containsIterative(50));
-  }
-
-  @Test
   public void newTreeIteratorHasNoNext() {
     assertFalse(tree.iterator().hasNext());
   }
@@ -55,12 +50,6 @@ public class BinarySearchTreeTest {
   public void addedValueIsFound() {
     tree.add(50);
     assertTrue(tree.contains(50));
-  }
-
-  @Test
-  public void addedValueIsFoundIteratively() {
-    tree.add(50);
-    assertTrue(tree.containsIterative(50));
   }
 
   @Test
@@ -92,24 +81,6 @@ public class BinarySearchTreeTest {
   public void containsMissingValueIsFalse() {
     buildExample();
     assertFalse(tree.contains(35));
-  }
-
-  @Test
-  public void containsIterativeFindsRoot() {
-    buildExample();
-    assertTrue(tree.containsIterative(50));
-  }
-
-  @Test
-  public void containsIterativeFindsLeaf() {
-    buildExample();
-    assertTrue(tree.containsIterative(60));
-  }
-
-  @Test
-  public void containsIterativeMissingValueIsFalse() {
-    buildExample();
-    assertFalse(tree.containsIterative(35));
   }
 
   @Test
