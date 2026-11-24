@@ -19,15 +19,16 @@ code/
     main/
       bst/
         BinarySearchTree.java           # contains, add, remove, iterator
-        Main.java                       # demo over the chapter's example tree
       stack/
         Stack.java                      # the Stack ADT from the stack chapter
         LinkedStack.java                # the stack the iterator uses
+      demo/
+        BinarySearchTreeDemo.java       # demo over the chapter's example tree
     test/
       bst/
         BinarySearchTreeTest.java
   scripts/
-    run.sh                              # run the demo (bst.Main)
+    run.sh                              # compile and run one demo
     test.sh                             # compile and run the JUnit tests
 ```
 
@@ -35,10 +36,10 @@ code/
 
 - `scripts/test.sh` — compiles everything and runs the full JUnit suite.
 - `scripts/test.sh bst.BinarySearchTreeTest` — compiles everything and runs only that test class.
-- `scripts/run.sh` — builds the chapter's example tree, searches it, adds and removes values, and prints the values in sorted order.
+- `scripts/run.sh demo.BinarySearchTreeDemo` — compiles everything and runs that one demo. Every class you implement has its own demo, `<Class>Demo`.
 
 ## What's here
 
 - `bst.BinarySearchTree<T>` — the binary search tree. It has `contains`, `add`, `remove`, and `iterator`. Each recursive operation is a public method that starts at the root and a private helper that works on a node. The private `minNode` and `maxNode` find the smallest and largest node in a subtree; `remove` uses `minNode` to find the in-order successor. The iterator is the iterative in-order traversal from the tree chapter's practice problems, with the stack kept in a field.
-- `bst.Main` — a demo over the chapter's example tree.
+- `demo.BinarySearchTreeDemo` — the demo for `BinarySearchTree`. It builds the chapter's example tree, searches it, adds and removes values, and prints the values in sorted order.
 - `stack.Stack<T>` and `stack.LinkedStack<T>` — the Stack ADT and its linked implementation from the stack chapter, included so this code compiles and runs on its own.
