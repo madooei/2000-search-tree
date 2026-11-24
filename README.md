@@ -38,7 +38,7 @@ code/
 - `scripts/test.sh bst.BinarySearchTreeTest` — compiles everything and runs only that test class.
 - `scripts/run.sh demo.BinarySearchTreeDemo` — compiles everything and runs that one demo. Every class you implement has its own demo, `<Class>Demo`.
 
-## What's here
+## Contents
 
 - `bst.BinarySearchTree<T>` — the binary search tree. It has `contains`, `add`, `remove`, and `iterator`. Each recursive operation is a public method that starts at the root and a private helper that works on a node. The private `minNode` and `maxNode` find the smallest and largest node in a subtree; `remove` uses `minNode` to find the in-order successor. The iterator is the iterative in-order traversal from the tree chapter's practice problems, with the stack kept in a field.
 - `demo.BinarySearchTreeDemo` — the demo for `BinarySearchTree`. It builds the chapter's example tree, searches it, adds and removes values, and prints the values in sorted order.
